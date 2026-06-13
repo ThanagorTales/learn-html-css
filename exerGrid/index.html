@@ -10,12 +10,29 @@
             
             
             display: grid;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: 100px 100px 100px;
-            gap: 5px;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-columns: repeat(4, 1fr);
         }
         .items{
             border: 2px solid red;
+        }
+        .box1{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .box2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .box3{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
         }
     </style>
 </head>
@@ -30,6 +47,7 @@
         <div class="items">G</div>
         <div class="items">H</div>
         <div class="items">I</div>
+        <div class="items">J</div>
     </div>
 
 
